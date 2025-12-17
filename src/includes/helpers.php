@@ -1,0 +1,1 @@
+# miscellaneous functions widely used accross php files
