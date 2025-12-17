@@ -1,0 +1,1 @@
+# for the home page of the game cisco pcaket tracer. the user should be able to access all categories and challenges from here.
