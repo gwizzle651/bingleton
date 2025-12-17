@@ -1,0 +1,1 @@
+# handles authentication and posssibly user sessions for security
