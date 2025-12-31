@@ -6,19 +6,19 @@
     // TODO: get login status
 ?>
 
-<div class="d-flex flex-column w-100 h-100 border-end-5 bg-dark-subtle">
-    <header class="py-3">
-        <h1 class="text-center lh-base fw-semibold">The Cyber Speedrunning Leaderboard</h1>
+<div class="">
+    <header class="">
+        <h1 class="">The Cyber Speedrunning Leaderboard</h1>
     </header>
 
-    <nav class="d-flex flex-column h4 ms-3">
+    <nav class="">
     <!-- TODO: add actual links -->
-        <a class="my-2">Dashboard</a>
-        <a class="my-2">Leaderboard</a>
-        <a class="my-2">Help</a>
+        <a class="">Dashboard</a>
+        <a class="">Leaderboard</a>
+        <a class="">Help</a>
     </nav>
 
-    <footer class="mt-auto">
+    <footer class="">
     <!-- TODO: check login status and display user profile -->
         <a>Login</a>
     </footer>
