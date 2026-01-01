@@ -1,8 +1,2 @@
-// Import vars
-@use "variables";
-
-// Import mixins
-@use "mixins";
-
-// Import partials
-@use "core/index";
+// Import partial
+@use "partials/core";

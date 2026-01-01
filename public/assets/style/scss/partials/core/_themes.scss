@@ -4,12 +4,12 @@
 :root {
     // Set default theme
     @each $color in map.keys(config.$base) {
-        --#{$color}: map.get(config.$base, $color);
+        --#{$color}: #{map.get(config.$base, $color)};
     }
 
     &[data-theme="dark"] {
         @each $color in map.keys(config.$dark) {
-            --#{$color}: map.get(config.$dark, $color);
+            --#{$color}: #{map.get(config.$dark, $color)};
         }
     }
 }

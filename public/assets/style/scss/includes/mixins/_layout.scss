@@ -1,0 +1,13 @@
+@mixin make-row($height) {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: $height;
+}
+
+@mixin make-col($width) {
+    display: flex;
+    flex-direction: column;
+    width: $width;
+    height: 100%;
+}
