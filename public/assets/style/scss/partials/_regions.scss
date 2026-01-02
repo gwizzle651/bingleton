@@ -1,4 +1,4 @@
-@use "../maps/_layout.scss";
+@use "../mixins/_layout.scss";
 
 .sidebar {
     @include layout.make-col(100%);
