@@ -1,3 +1,5 @@
+@use "sass:map";
+@use "../maps/_spacing.scss";
 @use "../mixins/_layout.scss";
 
 // Style for headers
@@ -5,22 +7,25 @@
     color: var(--primary-fg);
     background-color: var(--primary-bg);
 
-    padding: {
-        left: 0.25rem;
-        top: 0.5rem;
-        bottom: 0.5rem;
-    }
-
-    border-bottom: 3px solid var(--primary-bg-em);
+    padding: map.get(spacing.$padding, xl);
+    border-bottom: 
+        map.get(spacing.$border, normal) 
+        solid 
+        var(--primary-bg-em)
+    ;
 }
 
 // Nav menu and nav link style
 .nav-menu {
+    // All nav menu style
     &-h, &-v {
         color: var(--primary-fg);
         background-color: var(--primary-bg);
-
+        
+        // Nav link style
         a {
+            padding: map.get(spacing.$padding, m);
+
             &:hover {
                 background-color: var(--primary-bg-em);
                 color: var(--primary-fg-em);
@@ -28,22 +33,37 @@
         }
     }
 
+    // Horizontal nav menu only style
     &-h {
         @include layout.make-row($width: auto, $height: 100%);
-
+        
+        // Nav link style
         a {
             text-align: center;
-            border-right: 1px solid var(--primary-bg-em);
+            border-right: 
+                map.get(spacing.$border, thin) 
+                solid 
+                var(--primary-bg-em)
+            ;
         }
     }
 
+    // Vertical nav menu only style
     &-v {
         @include layout.make-col($width: 100%, $height: auto);
-        border-bottom: 2px solid var(--primary-bg-em);
-
+        border-bottom: 
+            (map.get(spacing.$border, normal) - map.get(spacing.$border, thin))
+            solid 
+            var(--primary-bg-em)
+        ;
+        
+        // Nav link style
         a {
-            padding-left: 0.5rem;
-            border-bottom: 1px solid var(--primary-bg-em);
+            border-bottom: 
+                map.get(spacing.$border, thin) 
+                solid 
+                var(--primary-bg-em)
+            ;
         }
     }
 }

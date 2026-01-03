@@ -1,8 +1,31 @@
+@use "sass:map";
+@use "../mixins/_headings.scss";
+
 body {
     color: var(--secondary-fg);
     background-color: var(--secondary-bg);
 
     font-family: Arial, sans-serif;
 
+    margin: 0;
+}
+
+h1 {
+    @include headings.make-h1(); 
+    margin: 0;
+}
+
+h2 {
+    @include headings.make-h2(); 
+    margin: 0;
+}
+
+h3 {
+    @include headings.make-h3(); 
+    margin: 0;
+}
+
+h4 {
+    @include headings.make-h4(); 
     margin: 0;
 }

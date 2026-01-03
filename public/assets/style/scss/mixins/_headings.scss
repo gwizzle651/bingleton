@@ -1,0 +1,66 @@
+@use "sass:map";
+@use "../maps/_text.scss";
+
+@mixin make-h1($is-centered: false) {
+    font: {
+        size: map.get(text.$font-size, h1);
+        weight: map.get(text.$font-weight, bold);
+    }
+
+    line-height: map.get(text.$line-spacing, double-spaced);
+    color: var(--primary-fg);
+
+    @if $is-centered == true {
+        text-align: center;
+    }
+    
+    @content;
+}
+
+@mixin make-h2($is-centered: false) {
+    font: {
+        size: map.get(text.$font-size, h2);
+        weight: map.get(text.$font-weight, bold);
+    }
+    
+    line-height: map.get(text.$line-spacing, loose);
+    color: var(--primary-fg);
+
+    @if $is-centered == true {
+        text-align: center;
+    }
+    
+    @content;
+}
+
+@mixin make-h3($is-centered: false) {
+    font: {
+        size: map.get(text.$font-size, h3);
+        weight: map.get(text.$font-weight, semi-bold);
+    }
+    
+    line-height: map.get(text.$line-spacing, normal);
+    color: var(--primary-fg);
+
+    @if $is-centered == true {
+        text-align: center;
+    }
+    
+    @content;
+}
+
+@mixin make-h4($is-centered: false) {
+    font: {
+        size: map.get(text.$font-size, h4);
+        weight: map.get(text.$font-weight, semi-bold);
+    }
+    
+    line-height: map.get(text.$line-spacing, normal);
+    color: var(--primary-fg);
+
+    @if $is-centered == true {
+        text-align: center;
+    }
+    
+    @content;
+}

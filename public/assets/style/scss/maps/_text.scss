@@ -1,0 +1,24 @@
+// Font sizes
+$font-size: (
+    h1: 2.25rem,
+    h2: 1.75rem,
+    h3: 1.5rem,
+    h4: 1.25rem,
+    p: 1rem
+);
+
+// Line spacing options
+$line-spacing: (
+    double-spaced: 2em,
+    loose: 1.75em,
+    normal: 1.5em,
+    tight: 1.25em,
+    none: 1em
+);
+
+// Font weights
+$font-weight: (
+    bold: 700,
+    semi-bold: 600,
+    normal: 400
+);

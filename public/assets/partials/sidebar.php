@@ -8,14 +8,14 @@
 
 <div class="sidebar">
     <header class="header">
-        <h1 class="">The Cyber Speedrunning Leaderboard</h1>
+        <h1 class="h1-centered">The Cyber Speedrunning Leaderboard</h1>
     </header>
 
     <nav class="nav-menu-v">
     <!-- TODO: add actual links -->
-        <a class="">Dashboard</a>
-        <a class="">Leaderboard</a>
-        <a class="">Help</a>
+        <a class="h4">Dashboard</a>
+        <a class="h4">Leaderboards</a>
+        <a class="h4">Help</a>
     </nav>
 
     <footer class="">
