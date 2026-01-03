@@ -1,0 +1,35 @@
+@use "sass:map";
+@use "../mixins/_headings.scss";
+
+// Headings
+.h1 {
+    @include headings.make-h1(); 
+
+    &-centered {
+        @include headings.make-h1($is-centered: true); 
+    }
+}
+
+.h2 {
+    @include headings.make-h2(); 
+
+    &-centered {
+        @include headings.make-h2($is-centered: true); 
+    }
+}
+
+.h3 {
+    @include headings.make-h3(); 
+
+    &-centered {
+        @include headings.make-h3($is-centered: true); 
+    }
+}
+
+.h4 {
+    @include headings.make-h4();
+
+    &-centered {
+        @include headings.make-h4($is-centered: true); 
+    }
+}
