@@ -1,0 +1,7 @@
+@for $i from 1 through 20 {
+    $width: $i * 5;
+    .w-#{$width} {
+        display: block;
+        width: $width;
+    }
+}

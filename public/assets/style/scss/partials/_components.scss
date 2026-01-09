@@ -1,5 +1,6 @@
 @use "sass:map";
 @use "../maps/_spacing.scss";
+@use "../maps/_border.scss";
 @use "../mixins/_layout.scss";
 
 // Style for headers
@@ -9,10 +10,16 @@
 
     padding: map.get(spacing.$padding, xl);
     border-bottom: 
-        map.get(spacing.$border, normal) 
+        map.get(border.$size, normal) 
         solid 
         var(--primary-bg-em)
     ;
+}
+
+// Style for footers
+.footer {
+    padding: map.get(spacing.$padding, m);
+    margin-top: auto;
 }
 
 // Nav menu and nav link style
@@ -41,7 +48,7 @@
         a {
             text-align: center;
             border-right: 
-                map.get(spacing.$border, thin) 
+                map.get(border.$size, thin) 
                 solid 
                 var(--primary-bg-em)
             ;
@@ -52,7 +59,7 @@
     &-v {
         @include layout.make-col($width: 100%, $height: auto);
         border-bottom: 
-            (map.get(spacing.$border, normal) - map.get(spacing.$border, thin))
+            (map.get(border.$size, normal) - map.get(border.$size, thin))
             solid 
             var(--primary-bg-em)
         ;
@@ -60,10 +67,38 @@
         // Nav link style
         a {
             border-bottom: 
-                map.get(spacing.$border, thin) 
+                map.get(border.$size, thin) 
                 solid 
                 var(--primary-bg-em)
             ;
+        }
+    }
+}
+
+// Buttons Style
+.button-l {
+    // Style for all buttons
+    &, &-highlight, &-alert, &-success, &-warning, &-danger {
+        border: {
+            size: map.get(border.$size, thin);
+            radius: map.get(border.$radius, l);
+        }
+
+        padding: map.get(spacing.$padding, m);
+        color: var(--secondary-fg);
+        background-color: var(--secondary-bg);
+
+        &:hover {
+            background-color: var(--secondary-bg-em);
+        }
+    }
+
+    // Style for highlight button
+    &-highlight {
+        color: var(--text-light);
+        background-color: var(--highlight-fg);
+        &:hover {
+            background-color: var(--highlight-fg-em);
         }
     }
 }
