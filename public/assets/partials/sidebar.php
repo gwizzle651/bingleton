@@ -18,8 +18,8 @@
         <a class="h4">Help</a>
     </nav>
 
-    <footer class="">
+    <footer class="footer">
     <!-- TODO: check login status and display user profile -->
-        <a>Login</a>
+        <a class="button-l-highlight h4-centered w-100">Login</a>
     </footer>
 </div>

@@ -1,4 +1,6 @@
+@use "sass:map";
 @use "../mixins/_layout.scss";
+@use "../maps/_border.scss";
 
 .sidebar {
     @include layout.make-col(100%);
@@ -6,5 +8,5 @@
     color: var(--primary-fg);
     background-color: var(--primary-bg);
     
-    border-right: 3px solid var(--primary-bg-em);
+    border-right: map.get(border.$size, normal) solid var(--primary-bg-em);
 }
